@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 7000
+      validation-timeout: 1000
+      maximum-pool-size: 16
+      max-lifetime: 1800000
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: postgres
+    password: postgres1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+
+jwt:
+  issuer: dev.jadepark@gmail.com
+  secret_key: jadepark
